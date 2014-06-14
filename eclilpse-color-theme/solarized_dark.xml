@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <colorTheme id="2928" name="Solarized (dark)" modified="2011-08-18 17:43:34" author="Diwaker Gupta" website="http://floatingsun.net">
-    <searchResultIndication color="#002B36" />
-    <filteredSearchResultIndication color="#002B36" />
-    <occurrenceIndication color="#002B36" />
-    <writeOccurrenceIndication color="#002B36" />
+    <searchResultIndication color="#073642" />
+    <filteredSearchResultIndication color="#073642" />
+    <occurrenceIndication color="#073642" />
+    <writeOccurrenceIndication color="#073642" />
     <findScope color="#EEE8D5" />
     <deletionIndication color="#aaccff" />
     <sourceHoverBackground color="#002B36" />
@@ -14,8 +14,8 @@
     <javadocLink color="#268BD2" italic="false" />
     <javadocTag color="#CB4B16" italic="false" />
     <javadocKeyword color="#B58900" italic="false" />
-    <class color="#839496" />
-    <interface color="#839496" />
+    <class color="#CB4B16" />
+    <interface color="#CB4B16" />
     <method color="#268BD2" />
     <methodDeclaration color="#268BD2" />
     <bracket color="#268BD2" />
@@ -27,7 +27,7 @@
     <staticMethod color="#859900" />
     <localVariable color="#839496" />
     <localVariableDeclaration color="#839496" />
-    <field color="#839496" />
+    <field color="#268BD2" />
     <staticField color="#859900" />
     <staticFinalField color="#859900" />
     <deprecatedMember color="#ab2525" />
