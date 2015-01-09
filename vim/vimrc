@@ -1,3 +1,5 @@
+set noundofile
+
 syntax on
 set background=dark
 
@@ -55,6 +57,7 @@ filetype plugin indent on    " required
 nmap <F3> :set list!<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>hm :Hexmode<CR>
 
 let g:localvimrc_ask = 0
 let g:DirDiffDynamicDiffText = 1
