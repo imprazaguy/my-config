@@ -27,6 +27,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
@@ -55,7 +56,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 nmap <F3> :set list!<CR>
-nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>n :NERDTreeTabsToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>hm :Hexmode<CR>
 
