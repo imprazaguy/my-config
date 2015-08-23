@@ -41,6 +41,7 @@ Plugin 'sjl/splice.vim'
 "Plugin 'Rip-Rip/clang_complete'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fidian/hexmode'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,6 +62,13 @@ nmap <F3> :set list!<CR>
 nnoremap <Leader>n :NERDTreeTabsToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>hm :Hexmode<CR>
+
+let g:EasyMotion_do_mapping = 0
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+let g:EasyMotion_smartcase = 1
 
 let g:localvimrc_ask = 0
 let g:DirDiffDynamicDiffText = 1
