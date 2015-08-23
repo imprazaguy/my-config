@@ -1,4 +1,6 @@
 set noundofile
+set relativenumber
+set number
 
 syntax on
 set background=dark
