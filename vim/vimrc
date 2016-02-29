@@ -39,7 +39,7 @@ Plugin 'embear/vim-localvimrc'
 "Plugin 'tmatilai/gitolite.vim'
 Plugin 'DirDiff.vim'
 Plugin 'sjl/splice.vim'
-"Plugin 'Rip-Rip/clang_complete'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fidian/hexmode'
 Plugin 'easymotion/vim-easymotion'
@@ -74,10 +74,12 @@ let g:EasyMotion_smartcase = 1
 
 let g:localvimrc_ask = 0
 let g:DirDiffDynamicDiffText = 1
-let g:clang_use_library = 1
-let g:clang_close_preview = 1
 
 let g:airline_powerline_fonts = 1
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_key_invoke_completion = '<C-J>'
+let g:ycm_confirm_extra_conf = 0
 
 set laststatus=2
 
