@@ -32,6 +32,7 @@ Plug 'embear/vim-localvimrc'
 "Plug 'tmatilai/gitolite.vim'
 Plug 'DirDiff.vim'
 Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'] }
+Plug 'Valloric/ListToggle'
 Plug 'altercation/vim-colors-solarized'
 Plug 'fidian/hexmode'
 Plug 'easymotion/vim-easymotion'
@@ -63,8 +64,12 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_key_invoke_completion = '<C-J>'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_always_populate_location_list = 1
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 nnoremap <leader>jt :YcmCompleter GetType<CR>
+
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
 
 set laststatus=2
 
