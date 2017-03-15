@@ -30,6 +30,8 @@
 
 import os
 import ycm_core
+import subprocess
+import re
 
 # These are the compilation flags that will be used in case there's no
 # compilation database set (by default, one is not set).
@@ -37,12 +39,6 @@ import ycm_core
 flags = [
 '-Wall',
 '-Wextra',
-#'-Werror',
-#'-Wc++98-compat',
-#'-Wno-long-long',
-#'-Wno-variadic-macros',
-#'-fexceptions',
-#'-DNDEBUG',
 # You 100% do NOT need -DUSE_CLANG_COMPLETER in your flags; only the YCM
 # source code needs it.
 #'-DUSE_CLANG_COMPLETER',
@@ -52,14 +48,15 @@ flags = [
 # a "-std=<something>".
 # For a C project, you would set this to something like 'c99' instead of
 # 'c++11'.
-#'-std=c++11',
+'-std=c99',
 # ...and the same thing goes for the magic -x option which specifies the
 # language that the files to be compiled are written in. This is mostly
 # relevant for c++ headers.
 # For a C project, you would set this to 'c' instead of 'c++'.
-#'-x',
-#'c++',
-'-I', '.',
+'-x',
+'c',
+'-I',
+'.',
 ]
 
 
@@ -137,6 +134,18 @@ def GetCompilationInfoForFile( filename ):
     return None
   return database.GetCompilationInfoForFile( filename )
 
+def LoadSystemIncludes():
+  regex = re.compile(ur'(?:\#include \<...\> search starts here\:)(?P<list>.*?)(?:End of search list)', re.DOTALL)
+  process = subprocess.Popen(['clang', '-v', '-E', '-x', 'c++', '-'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+  process_out, process_err = process.communicate('')
+  output = process_out + process_err
+  includes = []
+  for p in re.search(regex, output).group('list').split('\n'):
+    p = p.strip()
+    if len(p) > 0 and p.find('(framework directory)') < 0:
+      includes.append('-isystem')
+      includes.append(p)
+  return includes
 
 def FlagsForFile( filename, **kwargs ):
   if database:
@@ -146,14 +155,16 @@ def FlagsForFile( filename, **kwargs ):
     if not compilation_info:
       return None
 
+    relative_to = compilation_info.compiler_working_dir_
     final_flags = MakeRelativePathsInFlagsAbsolute(
       compilation_info.compiler_flags_,
-      compilation_info.compiler_working_dir_ )
+      relative_to )
   else:
     relative_to = DirectoryOfThisScript()
     final_flags = MakeRelativePathsInFlagsAbsolute( flags, relative_to )
 
-  return {
-    'flags': final_flags,
-    'do_cache': True
-  }
+  # Enable this if ycm uses incorrect system include paths
+  #final_flags += MakeRelativePathsInFlagsAbsolute(
+  #  LoadSystemIncludes(), relative_to )
+
+  return { 'flags': final_flags }
