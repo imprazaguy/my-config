@@ -31,7 +31,7 @@ Plug 'vim-airline/vim-airline-themes'
 "Plug 'mileszs/ack.vim'
 Plug 'embear/vim-localvimrc'
 "Plug 'tmatilai/gitolite.vim'
-Plug 'DirDiff.vim'
+Plug 'will133/vim-dirdiff'
 Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'] }
 Plug 'Valloric/ListToggle'
 Plug 'altercation/vim-colors-solarized'
