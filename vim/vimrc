@@ -50,6 +50,7 @@ nnoremap <Leader>n :NERDTreeTabsToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>hm :Hexmode<CR>
 
+let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o'
 let g:EasyMotion_do_mapping = 0
 nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
