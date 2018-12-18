@@ -2,8 +2,8 @@
 <colorTheme id="2928" name="Solarized (dark)" modified="2011-08-18 17:43:34" author="Diwaker Gupta" website="http://floatingsun.net">
     <searchResultIndication color="#073642" />
     <filteredSearchResultIndication color="#073642" />
-    <occurrenceIndication color="#073642" />
-    <writeOccurrenceIndication color="#073642" />
+    <occurrenceIndication color="#F0D8A8" />
+    <writeOccurrenceIndication color="#FDF6E3" />
     <findScope color="#EEE8D5" />
     <deletionIndication color="#aaccff" />
     <sourceHoverBackground color="#002B36" />
