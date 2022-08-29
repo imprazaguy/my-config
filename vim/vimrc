@@ -38,7 +38,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'fidian/hexmode'
 Plug 'easymotion/vim-easymotion'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'hynek/vim-python-pep8-indent'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 filetype plugin indent on    " required
