@@ -5,13 +5,19 @@
       "alignment": "left",
       "segments": [
         {
+          "style": "plain",
+          "foreground": "#C2C206",
+          "template": "({{ .Venv }}) ",
+          "type": "python"
+        },
+        {
           "foreground": "#45F1C2",
           "style": "plain",
           "template": "{{ .UserName }}@{{ .HostName }}",
           "type": "session"
         },
         {
-          "foreground": "#cc6600",
+          "foreground": "#CC6600",
           "style": "plain",
           "template": "{{ if .Env.MSYSTEM }} {{ .Env.MSYSTEM }}{{ end }}",
           "type": "text"
@@ -45,7 +51,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#cd5e42",
+          "foreground": "#CD5E42",
           "style": "plain",
           "template": "\ue3bf ",
           "type": "root"
